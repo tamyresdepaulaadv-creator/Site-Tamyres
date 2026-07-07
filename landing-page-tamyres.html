@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tamyres de Paula | Advocacia Imobiliária e Sucessória</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: '#002956',
+          navydeep: '#001A3A',
+          steel: '#2D4272',
+          gold: '#B49045',
+          goldlight: '#D2B679',
+          cream: '#F7F5F0',
+          stone: '#EDEAE2',
+          slate: '#665D4C',
+          wa: '#25D366',
+          waDark: '#1EBE59',
+        },
+        fontFamily: {
+          display: ['Fraunces', 'serif'],
+          body: ['Inter', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background-color: #F7F5F0; color: #002956; }
+  .font-display { font-family: 'Fraunces', serif; }
+  .eyebrow { letter-spacing: 0.18em; }
+
+  /* Signature "untying knot" line motif, reused as a section divider / hero backdrop */
+  .knot-line { position: absolute; pointer-events: none; opacity: 0.9; }
+
+  .card-lift { transition: transform .35s ease, box-shadow .35s ease; }
+  .card-lift:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -20px rgba(11,31,58,0.35); }
+
+  .btn-wa {
+    transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+    box-shadow: 0 10px 30px -8px rgba(37,211,102,0.55);
+  }
+  .btn-wa:hover { transform: translateY(-2px); box-shadow: 0 16px 36px -8px rgba(37,211,102,0.65); background-color:#1EBE59; }
+  .btn-wa:active { transform: translateY(0px) scale(0.98); }
+
+  .pulse-dot::before {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border-radius: 9999px;
+    background: rgba(37,211,102,0.45);
+    animation: pulseDot 2.2s ease-out infinite;
+  }
+  @keyframes pulseDot {
+    0% { transform: scale(0.7); opacity: .8; }
+    80% { transform: scale(1.9); opacity: 0; }
+    100% { opacity: 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .pulse-dot::before { animation: none; }
+    .card-lift, .btn-wa { transition: none; }
+  }
+
+  .divider-fade { background: linear-gradient(180deg, rgba(11,31,58,0) 0%, rgba(184,150,62,0.35) 50%, rgba(11,31,58,0) 100%); width:1px; }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- ======================= HEADER ======================= -->
+<header class="sticky top-0 z-50 bg-cream/90 backdrop-blur border-b border-navy/10">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-3.5 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-full border-2 border-gold flex items-center justify-center shrink-0">
+        <span class="font-display text-navy text-lg font-semibold">TP</span>
+      </div>
+      <div class="leading-tight">
+        <p class="font-display text-navy text-base sm:text-lg font-semibold tracking-tight">Tamyres de Paula</p>
+        <p class="text-[10px] sm:text-xs text-slate eyebrow uppercase">Advocacia Imobiliária e Sucessória</p>
+      </div>
+    </div>
+    <a href="#contato" class="hidden sm:inline-flex items-center gap-2 text-sm font-semibold text-navy border border-navy/25 rounded-full px-4 py-2 hover:bg-navy hover:text-white transition-colors">
+      Fale conosco
+    </a>
+    <a href="https://wa.me/5531983950705" target="_blank" class="sm:hidden inline-flex items-center gap-1.5 text-xs font-semibold text-white bg-wa rounded-full px-3.5 py-2">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.014 2C6.486 2 2 6.485 2 12.014c0 1.998.588 3.859 1.6 5.423L2 22l4.7-1.567a9.96 9.96 0 0 0 5.314 1.53h.005c5.528 0 10.014-4.485 10.014-10.014 0-2.676-1.043-5.19-2.94-7.086A9.947 9.947 0 0 0 12.014 2zm0 18.176h-.004a8.146 8.146 0 0 1-4.15-1.137l-.298-.177-2.788.93.937-2.717-.194-.28a8.147 8.147 0 0 1-1.253-4.36c0-4.508 3.668-8.176 8.184-8.176 2.185 0 4.24.852 5.785 2.399a8.13 8.13 0 0 1 2.395 5.785c0 4.508-3.668 8.176-8.176 8.176z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</header>
+
+<!-- ======================= HERO ======================= -->
+<section class="relative overflow-hidden bg-cream">
+  <!-- signature knot-line motif -->
+  <svg class="knot-line hidden md:block" style="top:-40px; right:-60px; width:520px; height:520px;" viewBox="0 0 520 520" fill="none">
+    <path d="M40 460 C 140 460, 120 320, 220 300 C 340 275, 300 120, 420 90 C 470 78, 495 60, 500 30"
+      stroke="#B49045" stroke-width="1.5" stroke-linecap="round" opacity="0.35"/>
+    <circle cx="500" cy="30" r="4" fill="#B49045" opacity="0.6"/>
+  </svg>
+
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 pt-12 sm:pt-16 pb-14 sm:pb-20 grid md:grid-cols-2 gap-10 md:gap-12 items-center relative">
+    <div class="relative z-10">
+      <p class="eyebrow uppercase text-xs sm:text-sm font-semibold text-gold mb-4">14 anos desatando nós jurídicos patrimoniais</p>
+      <h1 class="font-display text-[2rem] leading-[1.15] sm:text-4xl sm:leading-[1.15] md:text-[2.7rem] md:leading-[1.12] font-semibold text-navy tracking-tight">
+        Proteja seu patrimônio familiar: regularize seus imóveis ou resolva seu inventário com agilidade, segurança e sem burocracia.
+      </h1>
+      <p class="mt-5 text-slate text-base sm:text-lg leading-relaxed max-w-xl">
+        Atendimento especializado e humanizado em Belo Horizonte, Ponte Nova e região, focado em desatar os nós jurídicos dos seus bens — seja de forma judicial ou diretamente em cartório.
+      </p>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-3.5 sm:items-center">
+        <a href="https://wa.me/5531983950705?text=Ol%C3%A1%2C%20Dra.%20Tamyres%2C%20preciso%20de%20orienta%C3%A7%C3%A3o%20sobre%20invent%C3%A1rio%2Fregulariza%C3%A7%C3%A3o%20de%20im%C3%B3vel."
+           target="_blank"
+           class="btn-wa relative inline-flex items-center justify-center gap-2.5 bg-wa text-white font-bold text-base sm:text-lg rounded-full px-7 py-4">
+          <span class="relative flex items-center justify-center w-6 h-6">
+            <span class="pulse-dot absolute inset-0"></span>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.014 2C6.486 2 2 6.485 2 12.014c0 1.998.588 3.859 1.6 5.423L2 22l4.7-1.567a9.96 9.96 0 0 0 5.314 1.53h.005c5.528 0 10.014-4.485 10.014-10.014 0-2.676-1.043-5.19-2.94-7.086A9.947 9.947 0 0 0 12.014 2zm0 18.176h-.004a8.146 8.146 0 0 1-4.15-1.137l-.298-.177-2.788.93.937-2.717-.194-.28a8.147 8.147 0 0 1-1.253-4.36c0-4.508 3.668-8.176 8.184-8.176 2.185 0 4.24.852 5.785 2.399a8.13 8.13 0 0 1 2.395 5.785c0 4.508-3.668 8.176-8.176 8.176z"/></svg>
+          </span>
+          Falar com Especialista no WhatsApp
+        </a>
+        <p class="text-xs sm:text-sm text-slate/80 sm:ml-1">Resposta em horário comercial &middot; sem compromisso</p>
+      </div>
+
+      <div class="mt-8 flex items-center gap-6 text-navy/80">
+        <div>
+          <p class="font-display text-2xl font-semibold text-navy">14+</p>
+          <p class="text-xs text-slate uppercase eyebrow">anos de atuação</p>
+        </div>
+        <div class="w-px h-9 bg-navy/15"></div>
+        <div>
+          <p class="font-display text-2xl font-semibold text-navy">OAB/MG</p>
+          <p class="text-xs text-slate uppercase eyebrow">registro ativo</p>
+        </div>
+        <div class="w-px h-9 bg-navy/15"></div>
+        <div>
+          <p class="font-display text-2xl font-semibold text-navy">BH &amp; região</p>
+          <p class="text-xs text-slate uppercase eyebrow">Ponte Nova incl.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- espaço para foto profissional -->
+    <div class="relative z-10 flex justify-center md:justify-end">
+      <div class="relative w-full max-w-sm">
+        <div class="absolute -inset-3 border border-gold/50 rounded-2xl"></div>
+        <div class="relative aspect-[4/5] w-full rounded-2xl bg-navy/5 border border-navy/10 flex flex-col items-center justify-center text-center px-6 overflow-hidden">
+          <svg width="46" height="46" viewBox="0 0 24 24" fill="none" class="text-navy/25 mb-3"><path d="M12 12c2.5 0 4.5-2 4.5-4.5S14.5 3 12 3 7.5 5 7.5 7.5 9.5 12 12 12z" stroke="currentColor" stroke-width="1.4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7" stroke="currentColor" stroke-width="1.4"/></svg>
+          <p class="text-sm text-navy/50 font-medium">Foto profissional<br>Dra. Tamyres de Paula</p>
+          <p class="text-[11px] text-navy/35 mt-1">(substituir por imagem 4:5, fundo neutro)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= BLOCO DE DORES ======================= -->
+<section class="bg-white py-16 sm:py-20 border-t border-navy/5">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl mb-10 sm:mb-14">
+      <p class="eyebrow uppercase text-xs font-semibold text-gold mb-3">Você reconhece esse cenário?</p>
+      <h2 class="font-display text-2xl sm:text-3xl font-semibold text-navy leading-snug">
+        Bens parados, famílias em dúvida — e o tempo passando contra você.
+      </h2>
+    </div>
+
+    <div class="grid sm:grid-cols-3 gap-5 sm:gap-6">
+      <div class="card-lift bg-cream rounded-2xl p-6 sm:p-7 border border-navy/5">
+        <div class="w-11 h-11 rounded-full bg-navy/8 flex items-center justify-center mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="text-navy"><path d="M3 10.5 12 3l9 7.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 9.5V20a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M9 21v-6a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6" stroke="currentColor" stroke-width="1.6"/><path d="M4 12h16" stroke="#B49045" stroke-width="1.6" stroke-dasharray="2 3"/></svg>
+        </div>
+        <h3 class="font-display text-lg font-semibold text-navy mb-2">Imóvel de herança travado</h3>
+        <p class="text-sm text-slate leading-relaxed">Sem abertura do inventário, o bem não pode ser vendido, alugado ou dividido entre os herdeiros — e a pendência só cresce com o tempo.</p>
+      </div>
+
+      <div class="card-lift bg-cream rounded-2xl p-6 sm:p-7 border border-navy/5">
+        <div class="w-11 h-11 rounded-full bg-navy/8 flex items-center justify-center mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="text-navy"><rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 9h8M8 13h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 17h4" stroke="#B49045" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <h3 class="font-display text-lg font-semibold text-navy mb-2">Imóvel sem escritura ou registro</h3>
+        <p class="text-sm text-slate leading-relaxed">Comprado por "contrato de gaveta" e nunca formalizado, o imóvel fica juridicamente vulnerável e sem proteção plena para quem mora ou investiu nele.</p>
+      </div>
+
+      <div class="card-lift bg-cream rounded-2xl p-6 sm:p-7 border border-navy/5">
+        <div class="w-11 h-11 rounded-full bg-navy/8 flex items-center justify-center mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="text-navy"><path d="M12 3v18M6 8l6-5 6 5M6 16l6 5 6-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 class="font-display text-lg font-semibold text-navy mb-2">Venda ou financiamento barrado</h3>
+        <p class="text-sm text-slate leading-relaxed">Bancos e compradores exigem documentação regular. Pendências cartorárias ou sucessórias derrubam negociações no último momento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= NOSSAS SOLUÇÕES ======================= -->
+<section class="bg-navy py-16 sm:py-20 relative overflow-hidden">
+  <svg class="knot-line hidden md:block" style="bottom:-30px; left:-40px; width:380px; height:200px;" viewBox="0 0 380 200" fill="none">
+    <path d="M10 20 C 90 20, 60 100, 150 100 C 250 100, 240 180, 370 180" stroke="#B49045" stroke-width="1.5" opacity="0.25" stroke-linecap="round"/>
+  </svg>
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 relative">
+    <div class="max-w-2xl mb-10 sm:mb-14">
+      <p class="eyebrow uppercase text-xs font-semibold text-gold mb-3">Como resolvemos</p>
+      <h2 class="font-display text-2xl sm:text-3xl font-semibold text-white leading-snug">
+        Soluções jurídicas para desatar cada nó do seu patrimônio
+      </h2>
+    </div>
+
+    <div class="grid sm:grid-cols-3 gap-5 sm:gap-6">
+      <div class="card-lift bg-white/[0.04] border border-white/10 rounded-2xl p-6 sm:p-7">
+        <div class="w-11 h-11 rounded-full bg-gold/15 flex items-center justify-center mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="text-gold"><path d="M6 3h9l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M15 3v5h5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.5 13.5h7M8.5 17h4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <h3 class="font-display text-lg font-semibold text-white mb-2">Inventário Extrajudicial e Judicial</h3>
+        <p class="text-sm text-white/65 leading-relaxed">Condução completa do processo de partilha de bens, com preferência pela via extrajudicial (mais rápida e econômica) sempre que possível.</p>
+      </div>
+
+      <div class="card-lift bg-white/[0.04] border border-white/10 rounded-2xl p-6 sm:p-7">
+        <div class="w-11 h-11 rounded-full bg-gold/15 flex items-center justify-center mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="text-gold"><path d="M3 21h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M5 21V9l7-5 7 5v12" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M10 21v-6h4v6" stroke="currentColor" stroke-width="1.6"/><path d="M9 12h.01M15 12h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
+        <h3 class="font-display text-lg font-semibold text-white mb-2">Regularização Imobiliária</h3>
+        <p class="text-sm text-white/65 leading-relaxed">Usucapião, escrituração e regularização de registro para transformar posse em propriedade plena, segura e negociável.</p>
+      </div>
+
+      <div class="card-lift bg-white/[0.04] border border-white/10 rounded-2xl p-6 sm:p-7">
+        <div class="w-11 h-11 rounded-full bg-gold/15 flex items-center justify-center mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="text-gold"><path d="M12 21s-7-4.5-9.5-9C.5 8 3 4 7 4c2 0 3.8 1.2 5 3 1.2-1.8 3-3 5-3 4 0 6.5 4 4.5 8-2.5 4.5-9.5 9-9.5 9z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 class="font-display text-lg font-semibold text-white mb-2">Planejamento Sucessório</h3>
+        <p class="text-sm text-white/65 leading-relaxed">Organização antecipada da sucessão familiar, evitando conflitos futuros e reduzindo custos e tempo para os herdeiros.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= QUEM SOU EU ======================= -->
+<section class="bg-cream py-16 sm:py-20">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid md:grid-cols-[0.85fr_1.15fr] gap-10 md:gap-14 items-center">
+    <div class="order-1 flex justify-center md:justify-start">
+      <div class="relative w-full max-w-xs">
+        <div class="absolute -inset-3 border border-gold/50 rounded-2xl"></div>
+        <div class="relative aspect-[4/5] w-full rounded-2xl bg-navy/5 border border-navy/10 flex flex-col items-center justify-center text-center px-6">
+          <svg width="42" height="42" viewBox="0 0 24 24" fill="none" class="text-navy/25 mb-3"><path d="M12 12c2.5 0 4.5-2 4.5-4.5S14.5 3 12 3 7.5 5 7.5 7.5 9.5 12 12 12z" stroke="currentColor" stroke-width="1.4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7" stroke="currentColor" stroke-width="1.4"/></svg>
+          <p class="text-sm text-navy/50 font-medium">Foto institucional<br>Dra. Tamyres de Paula</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="order-2">
+      <p class="eyebrow uppercase text-xs font-semibold text-gold mb-3">Quem conduz o seu caso</p>
+      <h2 class="font-display text-2xl sm:text-3xl font-semibold text-navy leading-snug mb-5">
+        14 anos dedicados a resolver — não apenas a processar
+      </h2>
+      <p class="text-slate leading-relaxed mb-4">
+        Com mais de 14 anos de atuação sólida em direito imobiliário e sucessório, a Dra. Tamyres de Paula construiu uma advocacia orientada a resultados: cada caso é conduzido com atenção humana, linguagem clara e um plano de ação objetivo desde a primeira conversa.
+      </p>
+      <p class="text-slate leading-relaxed mb-8">
+        O foco não é apenas cumprir etapas processuais, mas efetivamente destravar o patrimônio da família — seja pela via extrajudicial mais ágil, seja pelo caminho judicial quando este for necessário.
+      </p>
+
+      <div class="grid grid-cols-3 gap-4 sm:gap-6 border-t border-navy/10 pt-6">
+        <div>
+          <p class="font-display text-xl sm:text-2xl font-semibold text-navy">14+</p>
+          <p class="text-[11px] sm:text-xs text-slate uppercase eyebrow mt-1">anos de experiência</p>
+        </div>
+        <div>
+          <p class="font-display text-xl sm:text-2xl font-semibold text-navy">100%</p>
+          <p class="text-[11px] sm:text-xs text-slate uppercase eyebrow mt-1">atendimento humanizado</p>
+        </div>
+        <div>
+          <p class="font-display text-xl sm:text-2xl font-semibold text-navy">Foco</p>
+          <p class="text-[11px] sm:text-xs text-slate uppercase eyebrow mt-1">em solução, não só processo</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CTA FINAL ======================= -->
+<section id="contato" class="bg-navydeep py-16 sm:py-20 relative overflow-hidden">
+  <svg class="knot-line hidden md:block" style="top:-20px; right:-30px; width:300px; height:300px;" viewBox="0 0 300 300" fill="none">
+    <path d="M10 280 C 100 280, 90 160, 180 140 C 250 125, 260 60, 290 20" stroke="#B49045" stroke-width="1.5" opacity="0.3" stroke-linecap="round"/>
+  </svg>
+  <div class="max-w-3xl mx-auto px-5 sm:px-8 text-center relative">
+    <h2 class="font-display text-2xl sm:text-3xl font-semibold text-white leading-snug mb-4">
+      Fale agora com quem entende do seu caso
+    </h2>
+    <p class="text-white/65 mb-8 max-w-xl mx-auto">
+      Conte sua situação e receba uma orientação clara sobre os próximos passos para regularizar seu imóvel ou resolver o inventário da sua família.
+    </p>
+    <a href="https://wa.me/5531983950705?text=Ol%C3%A1%2C%20Dra.%20Tamyres%2C%20gostaria%20de%20agendar%20uma%20conversa."
+       target="_blank"
+       class="btn-wa relative inline-flex items-center justify-center gap-2.5 bg-wa text-white font-bold text-base sm:text-lg rounded-full px-8 py-4">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.014 2C6.486 2 2 6.485 2 12.014c0 1.998.588 3.859 1.6 5.423L2 22l4.7-1.567a9.96 9.96 0 0 0 5.314 1.53h.005c5.528 0 10.014-4.485 10.014-10.014 0-2.676-1.043-5.19-2.94-7.086A9.947 9.947 0 0 0 12.014 2zm0 18.176h-.004a8.146 8.146 0 0 1-4.15-1.137l-.298-.177-2.788.93.937-2.717-.194-.28a8.147 8.147 0 0 1-1.253-4.36c0-4.508 3.668-8.176 8.184-8.176 2.185 0 4.24.852 5.785 2.399a8.13 8.13 0 0 1 2.395 5.785c0 4.508-3.668 8.176-8.176 8.176z"/></svg>
+      Falar com Especialista no WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- ======================= RODAPÉ ======================= -->
+<footer class="bg-navydeep border-t border-white/10 py-8 sm:py-10">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row items-center sm:items-start justify-between gap-5 text-center sm:text-left">
+    <div>
+      <p class="font-display text-white font-semibold">Tamyres de Paula | Advocacia Imobiliária e Sucessória</p>
+      <p class="text-white/50 text-xs mt-1">OAB/MG 135.454 &middot; Belo Horizonte / Ponte Nova &ndash; MG</p>
+    </div>
+    <div class="text-white/50 text-xs max-w-sm">
+      <p>Atendimento presencial mediante agendamento prévio ou 100% online, conforme sua conveniência.</p>
+      <p class="mt-2">&copy; 2026 Tamyres de Paula Advocacia. Todos os direitos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ======================= BOTÃO FLUTUANTE WHATSAPP (MOBILE) ======================= -->
+<a href="https://wa.me/5531983950705?text=Ol%C3%A1%2C%20Dra.%20Tamyres%2C%20preciso%20de%20orienta%C3%A7%C3%A3o%20jur%C3%ADdica."
+   target="_blank"
+   class="fixed bottom-5 right-5 z-50 w-14 h-14 rounded-full bg-wa text-white flex items-center justify-center shadow-2xl"
+   style="box-shadow: 0 10px 30px -6px rgba(37,211,102,0.6);">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.014 2C6.486 2 2 6.485 2 12.014c0 1.998.588 3.859 1.6 5.423L2 22l4.7-1.567a9.96 9.96 0 0 0 5.314 1.53h.005c5.528 0 10.014-4.485 10.014-10.014 0-2.676-1.043-5.19-2.94-7.086A9.947 9.947 0 0 0 12.014 2zm0 18.176h-.004a8.146 8.146 0 0 1-4.15-1.137l-.298-.177-2.788.93.937-2.717-.194-.28a8.147 8.147 0 0 1-1.253-4.36c0-4.508 3.668-8.176 8.184-8.176 2.185 0 4.24.852 5.785 2.399a8.13 8.13 0 0 1 2.395 5.785c0 4.508-3.668 8.176-8.176 8.176z"/></svg>
+</a>
+
+</body>
+</html>
